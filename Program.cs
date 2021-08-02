@@ -14,7 +14,8 @@ namespace RabbitMQ.Producer
             };
             using var connection = factory.CreateConnection();
             using var channel = connection.CreateModel();
-           
+            //QueueProducer.Publish(channel);
+            DirectExchangeProducer.Publish(channel);
         }
     }
 }
